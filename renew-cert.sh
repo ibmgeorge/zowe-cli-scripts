@@ -5,7 +5,7 @@
 set -e
 sudo systemctl stop haproxy
 # 1. Renew Let's Encrypt Certificate
-certbot-auto renew
+sudo certbot renew
 sudo systemctl start haproxy
 # 2. Package certificate & private key into p12 format
 mkdir -p ~/cert-renew.tmp && cd ~/cert-renew.tmp
